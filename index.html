@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tamil Nadu Tourism – Where Stories Never End</title>
+<style>
+:root{--bg:#fffaf3;--surface:#fff;--text:#2b1d14;--muted:#6d5a4c;--brand:#b3261e;--brand2:#e8a317;--dark:#3b1410;--line:#eadfce;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110d;--surface:#241a14;--text:#f4eadf;--muted:#bfae9e;--brand:#e5574d;--brand2:#f0b73a;--dark:#0f0a07;--line:#3a2c22;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17110d;--surface:#241a14;--text:#f4eadf;--muted:#bfae9e;--brand:#e5574d;--brand2:#f0b73a;--dark:#0f0a07;--line:#3a2c22;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}h1,h2,h3{line-height:1.2;margin:0 0 .5em}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+.top{background:var(--dark);color:#f4eadf;font:13px system-ui,sans-serif;padding:6px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--surface);border-bottom:3px solid var(--brand2)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-weight:700;font-size:20px;color:var(--brand);display:flex;align-items:center;gap:10px}
+.logo i{width:38px;height:38px;border-radius:50%;background:conic-gradient(var(--brand),var(--brand2),var(--brand));display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px}
+nav{display:flex;gap:22px;font:600 14px system-ui,sans-serif}nav a:hover{color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:11px 24px;border-radius:30px;font:600 14px system-ui,sans-serif;border:0;cursor:pointer}
+.btn.alt{background:transparent;border:2px solid #fff}
+#menu,#theme{display:none}
+.hero{min-height:560px;display:grid;align-items:center;color:#fff;text-align:center;background:linear-gradient(rgba(40,10,5,.55),rgba(40,10,5,.75)),radial-gradient(circle at 20% 20%,#e8a317 0,transparent 40%),radial-gradient(circle at 80% 70%,#b3261e 0,transparent 45%),#5b1d12}
+.hero h1{font-size:clamp(34px,6vw,64px)}.hero p{max-width:640px;margin:0 auto 24px;font-size:19px}
+.hero .tag{font:600 14px system-ui,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--brand2)}
+section{padding:64px 0}.alt-bg{background:var(--surface)}
+.sec-h{text-align:center;max-width:680px;margin:0 auto 36px}.sec-h h2{font-size:34px;color:var(--brand)}.sec-h p{color:var(--muted)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+.alt-bg .card{background:var(--bg)}
+.img{height:170px;display:grid;place-items:end start;padding:12px;color:#fff;font:700 28px system-ui}
+.card .b{padding:16px 18px 20px}.card h3{font-size:19px}.card p{color:var(--muted);font-size:15px;margin:0 0 10px}
+.more{color:var(--brand);font:600 14px system-ui,sans-serif}.more:after{content:" →"}
+.g1{background:linear-gradient(135deg,#0e7c86,#7ed4c4)}.g2{background:linear-gradient(135deg,#b3261e,#e8a317)}.g3{background:linear-gradient(135deg,#1d4e89,#f0a35e)}.g4{background:linear-gradient(135deg,#6b3fa0,#e58fb1)}.g5{background:linear-gradient(135deg,#1f6b3a,#a8d672)}.g6{background:linear-gradient(135deg,#7a4a1d,#e0b86a)}
+.unesco{display:flex;gap:18px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+.unesco .card{min-width:230px;scroll-snap-align:start}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
+.chip{padding:8px 18px;border:1px solid var(--line);border-radius:30px;background:var(--surface);font:600 13px system-ui,sans-serif;cursor:pointer;color:var(--text)}
+.chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.feat{border-radius:14px;color:#fff;padding:36px 28px;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end}
+.feat p{max-width:460px}
+.fest{display:flex;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;max-width:640px;margin:auto}
+.date{background:var(--brand);color:#fff;border-radius:10px;padding:10px 16px;text-align:center;font:700 26px system-ui}.date small{display:block;font-size:12px}
+.plan{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.plan a{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;text-align:center;font:600 15px system-ui,sans-serif}.plan a:hover{border-color:var(--brand)}
+.plan b{display:block;font-size:30px;margin-bottom:6px}
+.news{background:linear-gradient(120deg,var(--brand),#7a1a12);color:#fff;text-align:center}
+.news form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.news input{padding:12px 20px;border-radius:30px;border:0;min-width:260px;font:15px system-ui;background:#fff;color:#222}
+.news .btn{background:var(--brand2);color:#2b1d14}
+footer{background:var(--dark);color:#d9c9b8;font:14px system-ui,sans-serif;padding:40px 0 24px}
+footer .cols{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:24px}
+footer h4{color:var(--brand2);margin:0 0 10px}footer a{display:block;padding:3px 0}footer a:hover{color:#fff}
+.copy{border-top:1px solid #4a3a30;padding-top:16px;text-align:center;font-size:13px}
+@media(max-width:820px){nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--surface);flex-direction:column;padding:18px 20px;gap:14px;border-bottom:3px solid var(--brand2)}nav.open{display:flex}#menu{display:block;background:none;border:0;font-size:26px;color:var(--text);cursor:pointer}.split{grid-template-columns:1fr}header .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>📞 Toll Free No: 1800-425-31111</span><span>English | தமிழ்</span></div></div>
+<header><div class="wrap">
+<a class="logo" href="#top"><i>🛕</i>Tamil Nadu Tourism</a>
+<nav id="nav"><a href="#places">Places to Visit</a><a href="#todo">Things to Do</a><a href="#eat">Eat &amp; Drink</a><a href="#stories">Stories</a><a href="#fest">Festivals</a><a href="#plan">Plan</a></nav>
+<a class="btn" href="#plan">Plan your trip</a>
+<button id="menu" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+<div class="tag">Incredible India · Tamil Nadu</div>
+<h1>Welcome to Tamil Nadu!</h1>
+<p>A potpourri of vibrant cultures, exotic destinations and enduring memories; welcome to one of the heartlands of human civilization. <b>Tamil Nadu – where stories never end.</b></p>
+<a class="btn" href="#places">Start exploring</a>
+</div></div>
+
+<section id="places"><div class="wrap">
+<div class="sec-h"><h2>Places to Visit</h2><p>Discover Tamil Nadu's unique destinations – from UNESCO World Heritage Sites to soothing beaches and hill stations.</p></div>
+<div class="grid">
+<a class="card" href="#"><div class="img g1">Chennai</div><div class="b"><h3>Chennai</h3><p>An ideal destination for honeymooners, solo travellers, family vacationers and friends.</p><span class="more">Read More</span></div></a>
+<a class="card" href="#"><div class="img g2">Madurai</div><div class="b"><h3>Madurai</h3><p>Tranquil, graceful and steeped in Tamil culture – lose yourself in the streets and discover the divine.</p><span class="more">Read More</span></div></a>
+<a class="card" href="#"><div class="img g3">Kanyakumari</div><div class="b"><h3>Kanyakumari</h3><p>Picture-perfect sunsets, full moon nights, coastal food and walks by azure waters.</p><span class="more">Read More</span></div></a>
+<a class="card" href="#"><div class="img g4">Thanjavur</div><div class="b"><h3>Thanjavur</h3><p>Images from the past come together to paint the collage of a glorious city.</p><span class="more">Read More</span></div></a>
+<a class="card" href="#"><div class="img g5">Nilgiris</div><div class="b"><h3>Nilgiris</h3><p>Verdant valleys wrapped in mist and lush mountain ranges offer a warm welcome.</p><span class="more">Read More</span></div></a>
+</div></div></section>
+
+<section class="alt-bg"><div class="wrap">
+<div class="sec-h"><h2>UNESCO World Heritage Sites</h2><p>Tamil Nadu, the cultural capital of India, boasts five UNESCO World Heritage Sites you should not miss.</p></div>
+<div class="unesco">
+<div class="card"><div class="img g6">Thanjavur</div><div class="b"><h3>Brihadeeswara Temple</h3><span class="more">Explore</span></div></div>
+<div class="card"><div class="img g3">Mamallapuram</div><div class="b"><h3>Mamallapuram Shore Temple</h3><span class="more">Explore</span></div></div>
+<div class="card"><div class="img g2">Darasuram</div><div class="b"><h3>Airavatesvara Temple</h3><span class="more">Explore</span></div></div>
+<div class="card"><div class="img g4">Ariyalur</div><div class="b"><h3>Gangaikonda Cholapuram</h3><span class="more">Explore</span></div></div>
+<div class="card"><div class="img g5">Nilgiris</div><div class="b"><h3>The Nilgiri Mountain Railway</h3><span class="more">Explore</span></div></div>
+</div></div></section>
+
+<section id="todo"><div class="wrap">
+<div class="sec-h"><h2>Things to Do</h2><p>From paragliding to scuba diving, heritage trails to cultural performances, there is plenty to learn and experience.</p></div>
+<div class="chips" id="chips">
+<button class="chip on" data-k="all">All</button><button class="chip" data-k="air">Air</button><button class="chip" data-k="water">Water</button><button class="chip" data-k="land">Land</button>
+</div>
+<div class="grid" id="acts">
+<div class="card" data-k="air"><div class="img g3">🪂</div><div class="b"><h3>Parasailing</h3><p>Soar like a bird at some of the safest parasailing spots in the country.</p><span class="more">Read More</span></div></div>
+<div class="card" data-k="water"><div class="img g1">🏄</div><div class="b"><h3>Water Sports</h3><p>Ride rolling waves, slice through breakers and feel the adrenaline rush.</p><span class="more">Read More</span></div></div>
+<div class="card" data-k="land"><div class="img g5">🥾</div><div class="b"><h3>Trekking</h3><p>Hiking trails that always offer a warm welcome to those seeking solace.</p><span class="more">Read More</span></div></div>
+<div class="card" data-k="water"><div class="img g1">🤿</div><div class="b"><h3>Scuba Diving</h3><p>Dive into pristine waters and explore the magical flora and fauna.</p><span class="more">Read More</span></div></div>
+<div class="card" data-k="land"><div class="img g6">🌲</div><div class="b"><h3>Wildlife &amp; Trails</h3><p>Pack your bags for an expedition through the wildernesses of Tamil Nadu.</p><span class="more">Read More</span></div></div>
+</div></div></section>
+
+<section id="eat" class="alt-bg"><div class="wrap">
+<div class="sec-h"><h2>Eat &amp; Drink</h2><p>Treat yourself to the taste of Tamil Nadu. Immerse yourself in the stories that simmer in the state's gastronomic pot.</p></div>
+<div class="grid">
+<div class="card"><div class="img g6">Snacks</div><div class="b"><h3>Lip-smacking Snacks</h3><p>The crunchy Murukku should be on your list of must-try food.</p><span class="more">Read More</span></div></div>
+<div class="card"><div class="img g2">Cuisine</div><div class="b"><h3>Cuisines of the Tamil Land</h3><p>A culinary style dating to antiquity that has influenced South and South-East Asia.</p><span class="more">Read More</span></div></div>
+<div class="card"><div class="img g5">Regional</div><div class="b"><h3>Regional Cuisine</h3><p>Go beyond idli, vada and sambar – heirloom recipes, ancient culture and unique spices.</p><span class="more">Read More</span></div></div>
+<div class="card"><div class="img g4">Sweets</div><div class="b"><h3>Sweet Savouries</h3><p>Exquisite desserts, often using less sugar and proteins like green gram and chickpea.</p><span class="more">Read More</span></div></div>
+</div></div></section>
+
+<section id="stories"><div class="wrap">
+<div class="sec-h"><h2>Featured Stories</h2></div>
+<div class="split">
+<div class="feat g2"><h3>A relic of bygone Chola power &amp; prosperity</h3><p>Rajaraja II built the Airavatesvara Temple in Darasuram, ranked third after the famed Chola temples of Thanjavur and Gangaikondacholapuram.</p><span class="more" style="color:#fff">Read More</span></div>
+<div class="feat g5"><h3>Explore the Surreal Kolli Hills</h3><p>High in the Eastern Ghats, the road that bends the most winds through unrevealed greenery.</p><span class="more" style="color:#fff">Read More</span></div>
+</div>
+<div class="feat g3" style="margin-top:22px;min-height:180px"><h3>The mountains are calling...</h3><p>Five lesser-known but pristine hill stations of Tamil Nadu that will leave you spellbound.</p><span class="more" style="color:#fff">Read More</span></div>
+</div></section>
+
+<section id="fest" class="alt-bg"><div class="wrap">
+<div class="sec-h"><h2>Festivals &amp; Events</h2><p>Check out the latest festivals and events to add to your next holiday.</p></div>
+<div class="fest"><div class="date"><small>OCT</small>●</div><div><h3 style="margin:0">Saraswathi Pooja</h3><p style="margin:4px 0 0;color:var(--muted)">Celebrated across Tamil Nadu in honour of the goddess of knowledge and arts.</p></div></div>
+</div></section>
+
+<section id="plan"><div class="wrap">
+<div class="sec-h"><h2>Start Planning</h2><p>Some useful information before you jump on a plane.</p></div>
+<div class="plan">
+<a href="#"><b>✈️</b>How to Reach</a><a href="#"><b>🏨</b>Where to Stay</a><a href="#"><b>🗺️</b>Itineraries</a><a href="#"><b>🛂</b>Travel Tips</a><a href="#"><b>🎒</b>Tour Operators</a>
+</div></div></section>
+
+<section class="news"><div class="wrap">
+<h2>Subscribe to our newsletter</h2>
+<p>Sign up for Tamil Nadu Tourism's monthly newsletter to learn about our events, offers and more...</p>
+<form onsubmit="event.preventDefault();this.innerHTML='<b>Thank you for subscribing! 🎉</b>'"><input type="email" required placeholder="Your email address"><button class="btn">Subscribe</button></form>
+</div></section>
+
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>Tamil Nadu Tourism</h4>Toll Free: 1800-425-31111<br>Where stories never end.</div>
+<div><h4>Explore</h4><a href="#places">Places to Visit</a><a href="#todo">Things to Do</a><a href="#eat">Eat &amp; Drink</a></div>
+<div><h4>Info</h4><a href="#fest">Festivals &amp; Events</a><a href="#plan">Plan Your Trip</a><a href="#">Contact Us</a></div>
+</div>
+<div class="copy">Unofficial design clone for demonstration · Content inspired by tamilnadutourism.tn.gov.in</div>
+</div></footer>
+
+<script>
+document.getElementById('chips').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+document.querySelectorAll('.chip').forEach(function(c){c.classList.toggle('on',c===b)});
+document.querySelectorAll('#acts .card').forEach(function(c){c.style.display=(b.dataset.k==='all'||c.dataset.k===b.dataset.k)?'':'none'})});
+document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});
+</script>
+</body>
+</html>
